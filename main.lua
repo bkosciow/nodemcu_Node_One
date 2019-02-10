@@ -20,7 +20,13 @@ light_sensor_handler = require "light_detector_handle"
 light = light_sensor(send_socket, 6, 2000)
 light_handler = light_sensor_handler(light)
 
+relay_handler = require "relay_handler"
+switch_handler = relay_handler(CHANNELS)
+
+
 server_listener.add("dht", dht_handler)
 server_listener.add("motion", motion_handler)
 server_listener.add("light", light_handler)
+server_listener.add("relay", switch_handler)
+
 server_listener.start(PORT)

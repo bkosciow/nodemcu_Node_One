@@ -1,8 +1,10 @@
-NET_AP = "---"
-NET_PASSWORD = "---"
+_WIFI_APS = {
+    {["ssid"]="", ["pwd"]=""},
+    {["ssid"]="", ["pwd"]=""}
+}
 PROTOCOL = "iot:1"
 PORT = 5053
-CHANNELS = {2, 3, 4, 1}
+CHANNELS = {1}
 if file.exists('parameters-device.lc') then  
     dofile("parameters-device.lc")        
 else
