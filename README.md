@@ -1,4 +1,4 @@
-# Node One v1
+# NodeOne v2
 
-more on [https://koscis.wordpress.com/2017/04/03/node-one-a-multi-purpose-node/](https://koscis.wordpress.com/2017/04/03/node-one-a-multi-purpose-node/)
+more on [https://koscis.wordpress.com/tag/node-one/](https://koscis.wordpress.com/tag/node-one/)
 
