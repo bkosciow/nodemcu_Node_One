@@ -22,7 +22,7 @@ function mydht.new(pin, socket, callback, interval)
                 if self.socket ~= nil then     
                     message = network_message.prepareMessage()            
                     message.event = "dht.status"
-                    message.parameters = readings          
+                    message.response = readings          
                     network_message.sendMessage(socket, message)
                 end
                 if self.callback ~= nil then
@@ -37,7 +37,7 @@ function mydht.new(pin, socket, callback, interval)
 end    
 
 function mydht:get_readings()
-    status, temp, humi, temp_dec, humi_dec = dht.read11(self.pin)
+    status, temp, humi, temp_dec, humi_dec = dht.read11(self.pin)    
     if status ~= dht.OK then
         temp = nil
         humi = nil        

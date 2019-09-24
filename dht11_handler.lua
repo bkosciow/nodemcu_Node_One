@@ -20,7 +20,8 @@ function mydht_handler:handle(socket, message, port, ip)
     if message ~= nil and message.event ~= nil then
         if message.event == 'dht.readings' then
             message = network_message.prepareMessage()
-            message.response = self.node:get_readings()
+            message.parameters = self.node:get_readings()
+            message.event = "dht.status"
             network_message.sendMessage(socket, message, port, ip)
             response = true
             if self.callback ~= nil then
